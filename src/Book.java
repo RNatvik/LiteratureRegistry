@@ -1,5 +1,11 @@
-
-
+/**
+ * A class for storing information about a book
+ * @author Ruben Natvik <r_bn-95@hotmail.com>
+ *         Marcus Olai Grindvik <marcusgrindvik@gmail.com>
+ *         Vebjørn Wille
+ * @version v1.0
+ * @since v1.0
+ */
 public class Book {
 
     private String author;

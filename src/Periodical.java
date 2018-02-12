@@ -1,3 +1,12 @@
+
+/**
+ * A class for storing information about periodical literature.
+ * @author Ruben Natvik <r_bn-95@hotmail.com>
+ *         Marcus Olai Grindvik <marcusgrindvik@gmail.com>
+ *         Vebjørn Wille
+ * @version v1.0
+ * @since v1.0
+ */
 public class Periodical {
 
     private String title;

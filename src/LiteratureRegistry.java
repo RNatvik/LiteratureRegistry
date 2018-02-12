@@ -1,27 +1,46 @@
 import java.util.ArrayList;
 
-
+/**
+ * A class for storing, manipulating and accessing lists of Books and Periodicals
+ * @author Ruben Natvik <r_bn-95@hotmail.com>
+ *         Marcus Olai Grindvik <marcusgrindvik@gmail.com>
+ *         Vebjørn Wille
+ * @version v1.0
+ * @since v1.0
+ */
 public class LiteratureRegistry {
 
     private ArrayList<Book> books;
     private ArrayList<Periodical> periodicals;
 
+    /**
+     * Constructor for a new Literature Registry
+     */
     public LiteratureRegistry() {
         this.books = new ArrayList<>();
         this.periodicals = new ArrayList<>();
     }
 
+    /**
+     * Gets all Books in registry
+     * @return all Books as ArrayList
+     */
     public ArrayList<Book> getBooks() {
         return this.books;
     }
 
+    /**
+     * Gets all Periodicals in registry
+     * @return all Periodicals as ArrayList
+     */
     public ArrayList<Periodical> getPeriodicals() {
         return this.periodicals;
     }
 
     /**
-     * If the parameter book is not in the reistry Add parameter book to regestry
-     * @param book Adds a new book to the regestry
+     * Add  book to registry, if the book is not in the registry already.
+     * If the book is already registered, adds quantity.
+     * @param book the Book to add.
      */
     public void addBook(Book book) {
         boolean notInRegistry = true;
@@ -37,7 +56,7 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Remove's book from Index
+     * Removes a book from the registry
      * @param authorOrTitle Takes in author or title as string
      */
     public void removeBook(String authorOrTitle) {
@@ -49,8 +68,9 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Add's periodical to regisry if it's alredy there add quantity
-     * @param periodical Periodical to add
+     * Adds a periodical to registry
+     * If the periodical is already registered, add quantity instead
+     * @param periodical the Periodical to add
      */
     public void addPeriodical(Periodical periodical) {
         boolean notInRegistry = true;
@@ -66,7 +86,8 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Search fore book by author(author is string), Searches without consideration of upper and lower case, And finds Authors names that contains the search word's
+     * Search for book by author.
+     * Searches without consideration of upper and lower case, And finds Authors names that contains the search words
      * @param author author of the books
      * @return Details of found book's
      */
@@ -83,9 +104,10 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Search for books by Title(Title is String), Search without consideration of upper and lower case, And finds Titles that contains the search words
-     * @param title Title of the books
-     * @return Details of found books
+     * Search for books by title
+     * Search without consideration of upper and lower case, And finds titles that contains the search words
+     * @param title title to search for
+     * @return ArrayList containing found Books
      */
     public ArrayList<Book> getBookByTitle(String title) {
         ArrayList<Book> foundBooks = new ArrayList<>();
@@ -100,9 +122,10 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Search for books by Seriesname(seriesName is string), Search without consideration fo upper and lower case, and finds series names that contains the search words
-     * @param seriesName series name to the book series
-     * @return Details of found books
+     * Search for books by Seriesname
+     * Search without consideration fo upper and lower case, and finds series names that contains the search words
+     * @param seriesName series name to search for
+     * @return ArrayList containing found Books
      */
     public ArrayList<Book> getBookBySeries(String seriesName) {
         ArrayList<Book> foundBooks = new ArrayList<>();
@@ -117,9 +140,10 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Search for books by genre(Genre is string), Search without consideration of upper and lower case, and finds genre names that contains the search words
-     * @param genre The books genre
-     * @return Details of found books
+     * Search for books by genre
+     * Search without consideration of upper and lower case, and finds genre names that contains the search words
+     * @param genre The genre to search for
+     * @return ArrayList containing found Books
      */
     public ArrayList<Book> getBookByGenre(String genre) {
         ArrayList<Book> foundBooks = new ArrayList<>();
@@ -134,9 +158,10 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Search for books by Publisher(Publisher is string), Search without consideration of upper and lower case, and finds publisher names that contains the search words
-     * @param publisher The publisher of the books
-     * @return Details of found books
+     * Search for books by Publisher
+     * Search without consideration of upper and lower case, and finds publisher names that contains the search words
+     * @param publisher the publisher to search for
+     * @return ArrayList containing found Books
      */
     public ArrayList<Book> getBookByPublisher(String publisher) {
         ArrayList<Book> foundBooks = new ArrayList<>();
@@ -151,9 +176,9 @@ public class LiteratureRegistry {
     }
 
     /**
-     * increases quantity of book of books in stock
-     * @param books Object array book
-     * @param quantity Quantity of books
+     * increases quantity of books in stock
+     * @param books Arraylist of books
+     * @param quantity incremental value
      */
     public void increaseBookQuantity(ArrayList<Book> books, int quantity) {
         for (Book book : books) {
@@ -161,7 +186,12 @@ public class LiteratureRegistry {
         }
     }
 
-    public void increaseBookQuantity(int ID, int quantity) {
+    /**
+     * Increases a book's quantity. Book found by IDnumber.
+     * @param ID the book's ID tag.
+     * @param quantity the incremental value
+     */
+    public void increaseBookQuantity(long ID, int quantity) {
         for (Book book : this.books) {
             if (book.getIDnumber() == ID) {
                 book.increaseQuantity(quantity);
@@ -170,9 +200,9 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Decreases the quantity of books in stock
-     * @param books An array list of books
-     * @param quantity Quantity of books
+     * Decreases quantity of books in stock
+     * @param books Arraylist of books
+     * @param quantity decremental value
      */
     public void decreaseBookQuantity(ArrayList<Book> books, int quantity) {
         for (Book book : books) {
@@ -181,7 +211,20 @@ public class LiteratureRegistry {
     }
 
     /**
-     * Prints out details of book
+     * Decreases a book's quantity. Book found by IDnumber.
+     * @param ID the book's ID tag.
+     * @param quantity the decremental value
+     */
+    public void decreaseBookQuantity(long ID, int quantity) {
+        for (Book book : this.books) {
+            if (book.getIDnumber() == ID) {
+                book.decreaseQuantity(quantity);
+            }
+        }
+    }
+
+    /**
+     * Prints out details of book(s)
      * @param books An array list of books
      */
     public void printBooks(ArrayList<Book> books) {
