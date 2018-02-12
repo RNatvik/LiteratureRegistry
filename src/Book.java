@@ -12,6 +12,8 @@ public class Book {
     private int releaseYear;
     private String edition;
     private int quantity;
+    private long IDnumber;
+    static long IDcounter = 0;
 
 
     /**
@@ -36,6 +38,8 @@ public class Book {
         this.releaseYear = releaseYear;
         this.edition = edition;
         this.quantity = quantity;
+        this.IDcounter++;
+        this.IDnumber = IDcounter;
     }
 
     /**
@@ -58,6 +62,8 @@ public class Book {
         this.releaseYear = releaseYear;
         this.edition = edition;
         this.quantity = quantity;
+        this.IDcounter++;
+        this.IDnumber = IDcounter;
     }
 
     /**
@@ -227,6 +233,10 @@ public class Book {
         this.edition = edition;
     }
 
+    public long getIDnumber() {
+        return IDnumber;
+    }
+
     /**
      * Gets the book's quantity in stock
      * @return the quantity as int
@@ -264,6 +274,7 @@ public class Book {
         System.out.println("Genre: " + getGenre());
         System.out.println("Published by '" + getPublisher() + "'. (" + getReleaseYear() + ")");
         System.out.println(getQuantity() + " copies in stock.");
+        System.out.println("Book ID: " + this.IDnumber);
         System.out.println();
     }
 }

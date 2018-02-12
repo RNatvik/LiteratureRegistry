@@ -161,6 +161,14 @@ public class LiteratureRegistry {
         }
     }
 
+    public void increaseBookQuantity(int ID, int quantity) {
+        for (Book book : this.books) {
+            if (book.getIDnumber() == ID) {
+                book.increaseQuantity(quantity);
+            }
+        }
+    }
+
     /**
      * Decreases the quantity of books in stock
      * @param books An array list of books
