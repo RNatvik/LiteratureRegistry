@@ -1,9 +1,5 @@
 import java.util.ArrayList;
 
-/**
- * yolo2
- */
-
 public class LiteratureRegistry {
 
     private ArrayList<Book> books;
@@ -133,7 +129,7 @@ public class LiteratureRegistry {
             book.printDetails();
         }
     }
-    public void printAllBooks () {
+    public void printBooks () {
         for (Book book : this.books) {
             book.printDetails();
         }
