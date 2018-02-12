@@ -15,6 +15,7 @@ public class Book {
     private String edition;
     private int quantity;
 
+
     /**
      * Constructor for a book that is part of a series
      * @param author the book's author
