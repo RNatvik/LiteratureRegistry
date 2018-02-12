@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 
-
 public class LiteratureRegistry {
 
     private ArrayList<Book> books;
