@@ -38,6 +38,8 @@ public class Main {
         litReg.printBooks(litReg.getBookByTitle("The fellowship"));
         litReg.increaseBookQuantity(litReg.getBookByTitle("The fellowship"), 10);
 
+        //Marcus har alt for mange fans
+
 
     }
 }
