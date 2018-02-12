@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -37,11 +35,15 @@ public class Main {
                 "Fantasy", "Allen & Unwin", 1955, "", 10));
 
 
-        litReg.printBooks(litReg.getBookBySeries("The lord of the rings"));
-        ArrayList<Book> tempArray = litReg.getBookBySeries("The lord of the rings");
-        litReg.decreaseBookQuantity(tempArray, 1);
-        litReg.increaseBookQuantity(7,5);
-        litReg.printBooks(litReg.getBookByTitle("The fellow"));
+//        litReg.printBooks();
+//        litReg.printBooks(litReg.getBookBySeries("The lord of the rings"));
+//        litReg.printBooks(litReg.getBookByTitle("The fellowship of the ring"));
+//        litReg.printBooks(litReg.getBookByAuthor("Peter V. Brett"));
+//        litReg.printBooks(litReg.getBookByGenre("Biography"));
+//        litReg.printBooks(litReg.getBookByPublisher("Del Rey Books"));
+//        litReg.removeBook("Alibaba");
+//        litReg.getBookByAuthor("Alibaba");
+
 
 
 
