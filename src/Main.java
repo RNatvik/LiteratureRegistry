@@ -1,7 +1,7 @@
 public class Main {
     /**
      * Hei ruben livet til den rosa dragen har ikke vært som de burde i de siste.
-     * Hvordan går de med deg og dine
+     * Hvordan går de med deg og dine.
      * @param args
      */
     public static void main(String[] args) {
