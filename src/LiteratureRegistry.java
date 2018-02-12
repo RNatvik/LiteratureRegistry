@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 /**
- * Hei marcus
+ * Hei marcus2
  */
 public class LiteratureRegistry {
 
