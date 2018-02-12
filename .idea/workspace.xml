@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6a393f34-f977-468e-8b22-ad6f55c75dfe" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/LiteratureRegistry.java" afterPath="$PROJECT_DIR$/src/LiteratureRegistry.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -86,8 +85,8 @@
       <file leaf-file-name="LiteratureRegistry.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/LiteratureRegistry.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2675">
-              <caret line="185" column="35" lean-forward="false" selection-start-line="185" selection-start-column="35" selection-end-line="185" selection-end-column="35" />
+            <state relative-caret-position="2737">
+              <caret line="161" column="5" lean-forward="true" selection-start-line="161" selection-start-column="5" selection-end-line="161" selection-end-column="5" />
               <folding>
                 <element signature="e#313#314#0" expanded="true" />
                 <element signature="e#346#347#0" expanded="true" />
@@ -1147,11 +1146,18 @@
       <option name="project" value="LOCAL" />
       <updated>1518435368131</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Da er det meste commentert">
+      <created>1518439757706</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1518439757706</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3239000" />
+    <option name="totallyTimeSpent" value="3681000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1242,7 +1248,8 @@
       <path value="$PROJECT_DIR$" />
     </ignored-roots>
     <MESSAGE value="Test... igjen" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test... igjen" />
+    <MESSAGE value="Da er det meste commentert" />
+    <option name="LAST_COMMIT_MESSAGE" value="Da er det meste commentert" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2232,14 +2239,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Transaction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Periodical.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2635">
@@ -2274,6 +2273,14 @@
             <element signature="e#3416#3417#0" expanded="true" />
             <element signature="e#3457#3458#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Transaction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="26" lean-forward="false" selection-start-line="0" selection-start-column="26" selection-end-line="0" selection-end-column="26" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -2322,8 +2329,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LiteratureRegistry.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2675">
-          <caret line="185" column="35" lean-forward="false" selection-start-line="185" selection-start-column="35" selection-end-line="185" selection-end-column="35" />
+        <state relative-caret-position="2737">
+          <caret line="161" column="5" lean-forward="true" selection-start-line="161" selection-start-column="5" selection-end-line="161" selection-end-column="5" />
           <folding>
             <element signature="e#313#314#0" expanded="true" />
             <element signature="e#346#347#0" expanded="true" />
