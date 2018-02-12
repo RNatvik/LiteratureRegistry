@@ -1,6 +1,4 @@
-/**
- * yoyoyo
- */
+
 
 public class Book {
 
@@ -269,6 +267,3 @@ public class Book {
         System.out.println();
     }
 }
-/**
- * penis yolo
- */

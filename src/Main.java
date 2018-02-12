@@ -1,9 +1,5 @@
 public class Main {
-    /**
-     * Hei ruben livet til den rosa dragen har ikke vært som de burde i de siste.
-     * Hvordan går de med deg og dine.
-     * @param args
-     */
+
     public static void main(String[] args) {
 
         LiteratureRegistry litReg = new LiteratureRegistry();
@@ -42,7 +38,7 @@ public class Main {
         litReg.printBooks(litReg.getBookByTitle("The fellowship"));
         litReg.increaseBookQuantity(litReg.getBookByTitle("The fellowship"), 10);
 
-        //Marcus har alt for mange fans
+
 
 
     }

@@ -1,8 +1,6 @@
 import java.util.ArrayList;
 
-/**
- * Hei marcus2
- */
+
 public class LiteratureRegistry {
 
     private ArrayList<Book> books;
