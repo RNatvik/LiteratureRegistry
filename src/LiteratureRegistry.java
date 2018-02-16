@@ -56,6 +56,85 @@ public class LiteratureRegistry {
     }
 
     /**
+     * Search for books, by params that is used.
+     * @param author Takes in the book`s Author
+     * @param title Takes in the book`s Title
+     * @param seriesName Takes in the book`s Series Name
+     * @param genre Takes in the book`s Genre
+     * @param publisher Takes in the book`s publisher
+     * @param edition Takes in the book`s edition
+     * @return Found books, by the params that is search fore.
+     */
+    public ArrayList<Book> search (String author, String title, String seriesName, String genre, String publisher, String edition) {
+        boolean SearchByAuthor;
+        boolean SearchByTitle;
+        boolean SearchBySeries;
+        boolean SearchByGenre;
+        boolean SearchByPublisher;
+        boolean SearchByEdition;
+
+        SearchByAuthor = !author.toLowerCase().equals("");
+        SearchByTitle = !title.toLowerCase().equals("");
+        SearchBySeries = !seriesName.toLowerCase().equals("");
+        SearchByGenre = !genre.toLowerCase().equals("");
+
+        SearchByPublisher = !publisher.toLowerCase().equals("");
+        SearchByEdition = !edition.toLowerCase().equals("");
+
+        ArrayList<Book> foundbooks = new ArrayList<>();
+        for (Book book : books) {
+            if (SearchByAuthor) {
+                if (book.getAuthor() != null) {
+                    if (book.getAuthor().toLowerCase().contains(author.toLowerCase())) {
+                        foundbooks.add(book);
+
+
+                    }
+                }
+            }
+            if(SearchByTitle) {
+                if(book.getTitle() != null){
+                    if(book.getTitle().toLowerCase().contains(title.toLowerCase())){
+                        foundbooks.add(book);
+
+                    }
+                }
+
+            }
+            if(SearchBySeries) {
+                if(book.getSeriesName() !=null){
+                    if(book.getSeriesName().toLowerCase().contains(seriesName.toLowerCase())){
+                        foundbooks.add(book);
+                    }
+                }
+            }
+            if (SearchByGenre) {
+                if(book.getGenre() !=null){
+                    if(book.getGenre().toLowerCase().contains(genre.toLowerCase())){
+                        foundbooks.add(book);
+                    }
+                }
+            }
+            if(SearchByPublisher) {
+                if(book.getPublisher() !=null){
+                    if(book.getPublisher().toLowerCase().contains(publisher.toLowerCase())){
+                        foundbooks.add(book);
+                    }
+                }
+            }
+            if(SearchByEdition) {
+                if(book.getEdition() !=null){
+                    if (book.getEdition().toLowerCase().contains(edition.toLowerCase())){
+                        foundbooks.add(book);
+                    }
+                }
+            }
+        }
+        return foundbooks;
+
+
+    }
+    /**
      * Removes a book from the registry
      * @param authorOrTitle Takes in author or title as string
      */
