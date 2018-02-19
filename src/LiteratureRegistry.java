@@ -54,7 +54,42 @@ public class LiteratureRegistry {
             this.books.add(book);
         }
     }
-
+    public ArrayList<Book> SearchKeyWord (String Keyword){
+        ArrayList<Book> foundBooks = new ArrayList<>();
+        for(Book book : books) {
+            if (book.getAuthor() != null) {
+                if (book.getAuthor().toLowerCase().contains(Keyword.toLowerCase())) {
+                    foundBooks.add(book);
+                }
+            }
+            if(book.getTitle() != null) {
+                if (book.getTitle().toLowerCase().contains(Keyword.toLowerCase())) {
+                    foundBooks.add(book);
+                }
+            }
+            if(book.getSeriesName() != null){
+                if(book.getSeriesName().toLowerCase().contains(Keyword.toLowerCase())){
+                    foundBooks.add(book);
+                }
+            }
+            if (book.getGenre() != null) {
+                if (book.getGenre().toLowerCase().contains(Keyword.toLowerCase())) {
+                    foundBooks.add(book);
+                }
+            }
+            if (book.getPublisher()!= null) {
+                if (book.getPublisher().toLowerCase().contains(Keyword.toLowerCase())) {
+                    foundBooks.add(book);
+                }
+            }
+            if (book.getEdition() != null) {
+                if (book.getEdition().toLowerCase().contains(Keyword.toLowerCase())) {
+                    foundBooks.add(book);
+                }
+            }
+        }
+        return foundBooks;
+    }
     /**
      * Search for books, by params that is used.
      * @param author Takes in the book`s Author

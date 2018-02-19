@@ -37,7 +37,8 @@ public class Main {
 
 
 
-        litReg.printBooks((litReg.search("", "the two", "", "", "", "")));
+        litReg.printBooks((litReg.search("", "", "", "", "", "")));
+        litReg.printBooks((litReg.SearchKeyWord("Del rey books")));
 
 
 
