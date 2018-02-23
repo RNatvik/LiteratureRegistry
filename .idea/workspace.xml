@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6a393f34-f977-468e-8b22-ad6f55c75dfe" name="Default" comment="Laget enda en søke funksjon dær man kan søke etter alt i samme felte, Just fore fun&#10;-Marcus Weird code">
+    <list default="true" id="6a393f34-f977-468e-8b22-ad6f55c75dfe" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -384,7 +384,7 @@
       <option name="presentableId" value="Default" />
       <updated>1517576232587</updated>
       <workItem from="1518785907910" duration="10589000" />
-      <workItem from="1519056776614" duration="39762000" />
+      <workItem from="1519056776614" duration="39770000" />
     </task>
     <task id="LOCAL-00001" summary="Test... igjen">
       <created>1518435368130</created>
@@ -442,11 +442,18 @@
       <option name="project" value="LOCAL" />
       <updated>1519392132237</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Laget enda en søke funksjon dær man kan søke etter alt i samme felte, Just fore fun&#10;-Marcus Weird code">
+      <created>1519392200437</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1519392200437</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54214000" />
+    <option name="totallyTimeSpent" value="54222000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
