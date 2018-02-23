@@ -38,7 +38,17 @@ public class Main {
 
         litReg.addBook(new Book("J. R. R. Tolkien", "The Return of the King", "The Lord of the Rings", 3,
                 "Fantasy", "Allen & Unwin", 1955, "", 10));
+        litReg.addBook(new Book("Jo Nesbø", "Flaggermusmannen", "Crime Roman", "Aschehoug & Co", 1997, "", 47));
 
+        litReg.addBook(new Book( "Jo Nesbø", "Kaekerlakkene", "Crime Roman", "Aschehoug & Co", 1998,"Norsk", 46));
+
+        litReg.addBook(new Book("Jo Nesbø", "Cockroaches", "Crim Roman", "Aschehoug & Co", 1998, "English", 43));
+
+        litReg.addBook(new Book( "Jo Nesbø", "Doktor Proktor og det store gullrøveriet","Childrensbook", "Aschehoug & Co", 2012, "Norsk", 200));
+
+        litReg.addBook(new Book( "Jo Nesbø", "Thirst", "Crime Novel", "Harvill Secker", 2017, "English", 49));
+
+        litReg.addBook(new Book( "Jo Nesbø", "Thirst", "Crime Novel", "Harvill Secker", 2017, "Norsk", 45));
 
         ArrayList<Book> bookCart = new ArrayList<>();
         loop:
@@ -47,9 +57,9 @@ public class Main {
             int choice = 0;
             System.out.println("1. Search for book");
             System.out.println("2. Search for periodical");
-            System.out.println("2. Proceed to checkout");
-            System.out.println("3. Show cart");
-            System.out.println("4. Quit");
+            System.out.println("3. Proceed to checkout");
+            System.out.println("4. Show cart");
+            System.out.println("5. Quit");
 
             try {
                 choice = scanner.nextInt();
@@ -75,7 +85,7 @@ public class Main {
                     } catch (Exception e) {
                         continue loop;
                     }
-                    int choiceTwo = 0;
+                    int choiceTwo;
                     if (foundBooks.size() > 0) {
                         while (true) {
                             Scanner scanner2 = new Scanner(System.in);

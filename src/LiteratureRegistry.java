@@ -36,8 +36,7 @@ public class LiteratureRegistry {
      *
      * @return all Periodicals as ArrayList
      */
-    public ArrayList<Periodical> getPeriodicals() {
-        return this.periodicals;
+    public ArrayList<Periodical> getPeriodicals() { return this.periodicals;
     }
 
     /**
