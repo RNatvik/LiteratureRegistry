@@ -2,9 +2,10 @@ import java.util.ArrayList;
 
 /**
  * A class for storing, manipulating and accessing lists of Books and Periodicals
+ *
  * @author Ruben Natvik <r_bn-95@hotmail.com>
- *         Marcus Olai Grindvik <marcusgrindvik@gmail.com>
- *         Vebjørn Wille
+ * Marcus Olai Grindvik <marcusgrindvik@gmail.com>
+ * Vebjørn Wille
  * @version v1.0
  * @since v1.0
  */
@@ -23,6 +24,7 @@ public class LiteratureRegistry {
 
     /**
      * Gets all Books in registry
+     *
      * @return all Books as ArrayList
      */
     public ArrayList<Book> getBooks() {
@@ -31,6 +33,7 @@ public class LiteratureRegistry {
 
     /**
      * Gets all Periodicals in registry
+     *
      * @return all Periodicals as ArrayList
      */
     public ArrayList<Periodical> getPeriodicals() {
@@ -40,6 +43,7 @@ public class LiteratureRegistry {
     /**
      * Add  book to registry, if the book is not in the registry already.
      * If the book is already registered, adds quantity.
+     *
      * @param book the Book to add.
      */
     public void addBook(Book book) {
@@ -54,21 +58,23 @@ public class LiteratureRegistry {
             this.books.add(book);
         }
     }
-    public ArrayList<Book> SearchKeyWord (String Keyword){
+
+    public ArrayList<Book> SearchKeyWord(String Keyword) {
         ArrayList<Book> foundBooks = new ArrayList<>();
-        for(Book book : books) {
+
+        for (Book book : books) {
             if (book.getAuthor() != null) {
                 if (book.getAuthor().toLowerCase().contains(Keyword.toLowerCase())) {
                     foundBooks.add(book);
                 }
             }
-            if(book.getTitle() != null) {
+            if (book.getTitle() != null) {
                 if (book.getTitle().toLowerCase().contains(Keyword.toLowerCase())) {
                     foundBooks.add(book);
                 }
             }
-            if(book.getSeriesName() != null){
-                if(book.getSeriesName().toLowerCase().contains(Keyword.toLowerCase())){
+            if (book.getSeriesName() != null) {
+                if (book.getSeriesName().toLowerCase().contains(Keyword.toLowerCase())) {
                     foundBooks.add(book);
                 }
             }
@@ -77,7 +83,7 @@ public class LiteratureRegistry {
                     foundBooks.add(book);
                 }
             }
-            if (book.getPublisher()!= null) {
+            if (book.getPublisher() != null) {
                 if (book.getPublisher().toLowerCase().contains(Keyword.toLowerCase())) {
                     foundBooks.add(book);
                 }
@@ -89,18 +95,21 @@ public class LiteratureRegistry {
             }
         }
         return foundBooks;
+
     }
+
     /**
      * Search for books, by params that is used.
-     * @param author Takes in the book`s Author
-     * @param title Takes in the book`s Title
+     *
+     * @param author     Takes in the book`s Author
+     * @param title      Takes in the book`s Title
      * @param seriesName Takes in the book`s Series Name
-     * @param genre Takes in the book`s Genre
-     * @param publisher Takes in the book`s publisher
-     * @param edition Takes in the book`s edition
+     * @param genre      Takes in the book`s Genre
+     * @param publisher  Takes in the book`s publisher
+     * @param edition    Takes in the book`s edition
      * @return Found books, by the params that is search fore.
      */
-    public ArrayList<Book> search (String author, String title, String seriesName, String genre, String publisher, String edition) {
+    public ArrayList<Book> search(String author, String title, String seriesName, String genre, String publisher, String edition) {
         boolean SearchByAuthor;
         boolean SearchByTitle;
         boolean SearchBySeries;
@@ -127,39 +136,39 @@ public class LiteratureRegistry {
                     }
                 }
             }
-            if(SearchByTitle) {
-                if(book.getTitle() != null){
-                    if(book.getTitle().toLowerCase().contains(title.toLowerCase())){
+            if (SearchByTitle) {
+                if (book.getTitle() != null) {
+                    if (book.getTitle().toLowerCase().contains(title.toLowerCase())) {
                         foundbooks.add(book);
 
                     }
                 }
 
             }
-            if(SearchBySeries) {
-                if(book.getSeriesName() !=null){
-                    if(book.getSeriesName().toLowerCase().contains(seriesName.toLowerCase())){
+            if (SearchBySeries) {
+                if (book.getSeriesName() != null) {
+                    if (book.getSeriesName().toLowerCase().contains(seriesName.toLowerCase())) {
                         foundbooks.add(book);
                     }
                 }
             }
             if (SearchByGenre) {
-                if(book.getGenre() !=null){
-                    if(book.getGenre().toLowerCase().contains(genre.toLowerCase())){
+                if (book.getGenre() != null) {
+                    if (book.getGenre().toLowerCase().contains(genre.toLowerCase())) {
                         foundbooks.add(book);
                     }
                 }
             }
-            if(SearchByPublisher) {
-                if(book.getPublisher() !=null){
-                    if(book.getPublisher().toLowerCase().contains(publisher.toLowerCase())){
+            if (SearchByPublisher) {
+                if (book.getPublisher() != null) {
+                    if (book.getPublisher().toLowerCase().contains(publisher.toLowerCase())) {
                         foundbooks.add(book);
                     }
                 }
             }
-            if(SearchByEdition) {
-                if(book.getEdition() !=null){
-                    if (book.getEdition().toLowerCase().contains(edition.toLowerCase())){
+            if (SearchByEdition) {
+                if (book.getEdition() != null) {
+                    if (book.getEdition().toLowerCase().contains(edition.toLowerCase())) {
                         foundbooks.add(book);
                     }
                 }
@@ -169,8 +178,10 @@ public class LiteratureRegistry {
 
 
     }
+
     /**
      * Removes a book from the registry
+     *
      * @param authorOrTitle Takes in author or title as string
      */
     public void removeBook(String authorOrTitle) {
@@ -184,6 +195,7 @@ public class LiteratureRegistry {
     /**
      * Adds a periodical to registry
      * If the periodical is already registered, add quantity instead
+     *
      * @param periodical the Periodical to add
      */
     public void addPeriodical(Periodical periodical) {
@@ -202,12 +214,13 @@ public class LiteratureRegistry {
     /**
      * Search for book by author.
      * Searches without consideration of upper and lower case, And finds Authors names that contains the search words
+     *
      * @param author author of the books
      * @return Details of found book's
      */
     public ArrayList<Book> getBookByAuthor(String author) {
         ArrayList<Book> foundBooks = new ArrayList<>();
-        for(Book book : books) {
+        for (Book book : books) {
             if (book.getAuthor() != null) {
                 if (book.getAuthor().toLowerCase().contains(author.toLowerCase())) {
                     foundBooks.add(book);
@@ -220,12 +233,13 @@ public class LiteratureRegistry {
     /**
      * Search for books by title
      * Search without consideration of upper and lower case, And finds titles that contains the search words
+     *
      * @param title title to search for
      * @return ArrayList containing found Books
      */
     public ArrayList<Book> getBookByTitle(String title) {
         ArrayList<Book> foundBooks = new ArrayList<>();
-        for(Book book : this.books) {
+        for (Book book : this.books) {
             if (book.getTitle() != null) {
                 if (book.getTitle().toLowerCase().contains(title.toLowerCase())) {
                     foundBooks.add(book);
@@ -238,12 +252,13 @@ public class LiteratureRegistry {
     /**
      * Search for books by Seriesname
      * Search without consideration fo upper and lower case, and finds series names that contains the search words
+     *
      * @param seriesName series name to search for
      * @return ArrayList containing found Books
      */
     public ArrayList<Book> getBookBySeries(String seriesName) {
         ArrayList<Book> foundBooks = new ArrayList<>();
-        for(Book book : this.books) {
+        for (Book book : this.books) {
             if (book.getSeriesName() != null) {
                 if (book.getSeriesName().toLowerCase().contains(seriesName.toLowerCase())) {
                     foundBooks.add(book);
@@ -256,12 +271,13 @@ public class LiteratureRegistry {
     /**
      * Search for books by genre
      * Search without consideration of upper and lower case, and finds genre names that contains the search words
+     *
      * @param genre The genre to search for
      * @return ArrayList containing found Books
      */
     public ArrayList<Book> getBookByGenre(String genre) {
         ArrayList<Book> foundBooks = new ArrayList<>();
-        for(Book book : this.books) {
+        for (Book book : this.books) {
             if (book.getGenre() != null) {
                 if (book.getGenre().toLowerCase().contains(genre.toLowerCase())) {
                     foundBooks.add(book);
@@ -274,6 +290,7 @@ public class LiteratureRegistry {
     /**
      * Search for books by Publisher
      * Search without consideration of upper and lower case, and finds publisher names that contains the search words
+     *
      * @param publisher the publisher to search for
      * @return ArrayList containing found Books
      */
@@ -291,7 +308,8 @@ public class LiteratureRegistry {
 
     /**
      * increases quantity of books in stock
-     * @param books Arraylist of books
+     *
+     * @param books    Arraylist of books
      * @param quantity incremental value
      */
     public void increaseBookQuantity(ArrayList<Book> books, int quantity) {
@@ -302,7 +320,8 @@ public class LiteratureRegistry {
 
     /**
      * Increases a book's quantity. Book found by IDnumber.
-     * @param ID the book's ID tag.
+     *
+     * @param ID       the book's ID tag.
      * @param quantity the incremental value
      */
     public void increaseBookQuantity(long ID, int quantity) {
@@ -315,7 +334,8 @@ public class LiteratureRegistry {
 
     /**
      * Decreases quantity of books in stock
-     * @param books Arraylist of books
+     *
+     * @param books    Arraylist of books
      * @param quantity decremental value
      */
     public void decreaseBookQuantity(ArrayList<Book> books, int quantity) {
@@ -326,7 +346,8 @@ public class LiteratureRegistry {
 
     /**
      * Decreases a book's quantity. Book found by IDnumber.
-     * @param ID the book's ID tag.
+     *
+     * @param ID       the book's ID tag.
      * @param quantity the decremental value
      */
     public void decreaseBookQuantity(long ID, int quantity) {
@@ -339,6 +360,7 @@ public class LiteratureRegistry {
 
     /**
      * Prints out details of book(s)
+     *
      * @param books An array list of books
      */
     public void printBooks(ArrayList<Book> books) {
@@ -350,7 +372,7 @@ public class LiteratureRegistry {
     /**
      * Prints all books in registry
      */
-    public void printBooks () {
+    public void printBooks() {
         for (Book book : this.books) {
             book.printDetails();
         }
